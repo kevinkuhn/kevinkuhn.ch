@@ -1,0 +1,33 @@
+# Kevin Kuhn
+
+> AI-Powered Strategic Intelligence | Founder @ Gopf | University Lecturer | Board Member
+
+Kevin Kuhn is a Swiss entrepreneur, university lecturer, and founder of Gopf – Strategic Intelligence. He helps companies make sense of data through applied research, ideation, and education. He lectures at HWZ Zurich and HSLU Lucerne.
+
+## Pages
+
+- [Home](https://www.kevinkuhn.ch/): Bio, engagement history, and education
+- [Experiences](https://www.kevinkuhn.ch/experiences.html): Projects including Semantic Similarity Map, Datenstrategie, Brauer AI, and more
+- [Contact](https://www.kevinkuhn.ch/contact.html): Email, phone, Calendly booking, LinkedIn
+- [Snippets](https://www.kevinkuhn.ch/snippets.html): 58 articles on data science, AI, strategic intelligence, and entrepreneurship
+
+## Topics
+
+- Strategic Intelligence & Competitive Analysis
+- Data Science & Machine Learning
+- AI in Manufacturing & Public Sector
+- Entrepreneurship & Startup Building
+- University Lecturing (EMBA, Data & AI)
+- Board Membership (Energy Sector)
+
+## Key Projects
+
+- Gopf – Strategic Intelligence (gopf.com): AI-powered market intelligence platform
+- Semantic Similarity Map: Visual document similarity analysis
+- Brauer AI: First Swiss IPA brewed from an AI-generated recipe
+
+## Contact
+
+- Email: hello@kevinkuhn.ch
+- LinkedIn: https://www.linkedin.com/in/kuhnkevin/
+- Book a Meeting: https://calendly.com/kevin-kuhn/30min-digital-data-talk

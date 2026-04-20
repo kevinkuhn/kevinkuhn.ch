@@ -1,0 +1,1058 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #000;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Site-wide max-width wrapper ─── */
+.site-wrapper {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* Full-bleed sections break out of wrapper */
+.hero,
+.contact-hero {
+  max-width: none;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Header ─── */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 24px 40px;
+}
+
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.site-header.dark-header {
+  color: #fff;
+}
+
+.site-header.dark-header .site-logo {
+  color: #fff;
+}
+
+.site-header.dark-header .social-icons svg {
+  fill: #fff;
+}
+
+.site-header.hero-header .site-nav a,
+.site-header.hero-header .social-icons svg {
+  color: #fff;
+  fill: #fff;
+}
+
+.site-header.hero-header.scrolled .site-nav a,
+.site-header.hero-header.scrolled .social-icons svg {
+  color: #000;
+  fill: #000;
+}
+
+.site-header.dark-header.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.site-logo {
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.site-nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: inherit;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ─── Footer ─── */
+.site-footer {
+  padding: 40px 0 50px;
+  text-align: center;
+}
+
+.site-footer .social-icons {
+  justify-content: center;
+  margin-left: 0;
+}
+
+.site-footer .social-icons svg {
+  width: 20px;
+  height: 20px;
+  fill: #000;
+}
+
+/* ─── Layout ─── */
+.section {
+  padding: 80px 40px;
+}
+
+.section-small {
+  padding: 40px 40px;
+}
+
+.section-large {
+  padding: 120px 40px;
+}
+
+.container-narrow {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.container-medium {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container-wide {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* ─── Typography ─── */
+h1 {
+  font-size: 39px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Homepage Hero ─── */
+.hero {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  max-width: none;
+}
+
+/* ─── Homepage Intro Card ─── */
+.intro-section {
+  padding: 80px 40px;
+}
+
+.intro-card {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  flex: 1;
+  padding-right: 60px;
+}
+
+.intro-text h1 {
+  font-size: 39px;
+  margin-bottom: 0.4em;
+}
+
+.intro-text h3 {
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+
+.intro-text h3 a {
+  text-decoration: underline;
+}
+
+.intro-image {
+  flex: 0 0 auto;
+  width: 380px;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ─── Quote Section ─── */
+.quote-section {
+  padding: 100px 40px;
+}
+
+.quote-section h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.quote-section .attribution {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+}
+
+/* ─── Engagement / Education ─── */
+.cv-section {
+  padding: 40px 40px;
+}
+
+.cv-section .container-narrow {
+  text-align: left;
+}
+
+.cv-section h3 {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5em;
+}
+
+.cv-entry {
+  margin-bottom: 1.5em;
+}
+
+.cv-entry .year {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.cv-entry .role {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.cv-entry a {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.photo-credit {
+  padding: 20px 40px 40px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  max-width: 400px;
+}
+
+/* ─── Experiences Page ─── */
+.experiences-hero {
+  padding: 120px 40px 60px;
+  max-width: 640px;
+}
+
+.experiences-hero h1 {
+  font-size: 39px;
+}
+
+/* Marquee */
+.marquee-section {
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+.marquee-track a {
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s;
+}
+
+.marquee-track a:hover {
+  opacity: 0.6;
+}
+
+.marquee-track .separator {
+  font-size: 26px;
+  font-weight: 300;
+  color: #999;
+  margin: 0 8px;
+}
+
+/* Hover-follow GIF preview */
+.hover-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45vmin;
+  height: 45vmin;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: -22.5vmin;
+  margin-top: -22.5vmin;
+}
+
+.hover-preview.active {
+  opacity: 1;
+}
+
+.hover-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.marquee-track a[data-gif] {
+  position: relative;
+  z-index: 51;
+}
+
+/* Services section */
+.services-section {
+  padding: 80px 40px;
+}
+
+.services-section h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+}
+
+.services-section p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+/* Fields of Interest */
+.fields-section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.fields-section h2 {
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+
+.fields-section p {
+  font-size: 15px;
+  font-weight: 300;
+  color: #444;
+}
+
+/* Contact block (on experiences page) */
+.contact-block {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.contact-block h2 {
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+
+.contact-block p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.contact-block a {
+  color: #666;
+}
+
+/* ─── Contact Page ─── */
+.contact-hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 120px 60px 80px;
+  color: #fff;
+}
+
+.contact-hero .contact-content {
+  max-width: 1700px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-content .label {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contact-content h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.contact-content h2 a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-content .follow-label {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.contact-content .follow-link {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.contact-content .follow-link a {
+  color: #fff;
+}
+
+/* ─── Experience Detail Pages ─── */
+.experience-detail {
+  padding: 140px 40px 60px;
+  text-align: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience-detail h4 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.experience-detail h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.experience-detail p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.experience-detail p a {
+  color: #888;
+}
+
+/* Experience detail - rich content (Glaskugel) */
+.experience-content {
+  padding: 40px 40px 80px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.experience-content h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 2em 0 0.5em;
+  text-align: left;
+}
+
+.experience-content h3 {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.experience-content p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 1.2em;
+}
+
+.experience-content ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.experience-content ol li {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 0.3em;
+}
+
+.experience-content img {
+  margin: 30px auto;
+  border-radius: 0;
+}
+
+.experience-content .image-caption {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+/* Photo gallery (3 images side by side) */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 40px 0;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Experience closing statement */
+.experience-closing {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.experience-closing h2 {
+  font-size: 30px;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Prev/Next navigation */
+.experience-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-top: 1px solid #eee;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.experience-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.experience-nav a:hover {
+  opacity: 0.6;
+}
+
+.experience-nav .arrow {
+  font-size: 1.8em;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.experience-nav .next {
+  margin-left: auto;
+}
+
+/* ─── Snippets Page ─── */
+.snippets-hero {
+  padding: 120px 40px 40px;
+  text-align: center;
+}
+
+.snippets-hero h1 {
+  font-size: 39px;
+  margin-bottom: 0.3em;
+}
+
+.snippets-hero p {
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+}
+
+.snippets-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 40px 80px;
+}
+
+.snippet-item {
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.snippet-item:first-child {
+  border-top: 1px solid #eee;
+}
+
+.snippet-meta {
+  font-size: 13px;
+  font-weight: 300;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.snippet-item h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+.snippet-item h2 a {
+  text-decoration: none;
+}
+
+.snippet-item h2 a:hover {
+  text-decoration: underline;
+}
+
+.snippet-body p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.snippet-body img {
+  margin: 20px 0;
+}
+
+.snippet-body .video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.snippet-body .video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.snippet-body blockquote {
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* ─── Snippet Detail Page ─── */
+.snippet-detail {
+  padding: 120px 40px 60px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.snippet-detail .snippet-meta {
+  margin-bottom: 12px;
+}
+
+.snippet-detail h1 {
+  font-size: 30px;
+  margin-bottom: 1em;
+}
+
+.snippet-detail-body p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 1.2em;
+}
+
+.snippet-detail-body img {
+  margin: 25px 0;
+}
+
+.snippet-detail-body .video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 25px 0;
+}
+
+.snippet-detail-body .video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.snippet-detail-body blockquote {
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+  margin: 25px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.snippet-linkedin {
+  margin-top: 40px;
+}
+
+.btn-linkedin {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s;
+}
+
+.btn-linkedin:hover {
+  opacity: 0.7;
+}
+
+.snippet-back {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.snippet-back a {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .site-header-inner {
+    padding: 18px 20px;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 99;
+  }
+
+  .dark-header .site-nav {
+    background: #222;
+  }
+
+  .site-nav.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .site-nav a {
+    font-size: 1.2em;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 101;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .intro-card {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .intro-text {
+    padding-right: 0;
+  }
+
+  .intro-image {
+    width: 280px;
+  }
+
+  .section, .section-large {
+    padding: 60px 20px;
+  }
+
+  .section-small, .cv-section {
+    padding: 30px 20px;
+  }
+
+  .quote-section {
+    padding: 60px 20px;
+  }
+
+  .quote-section h2 {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .site-logo {
+    font-size: 22px;
+  }
+
+  .marquee-track a {
+    font-size: 22px;
+  }
+
+  .experience-nav {
+    padding: 30px 20px;
+  }
+
+  .experience-detail {
+    padding: 100px 20px 40px;
+  }
+
+  .experience-content {
+    padding: 30px 20px 60px;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-gallery img {
+    height: auto;
+  }
+
+  .contact-hero {
+    padding: 100px 30px 60px;
+  }
+
+  .contact-content h2 {
+    font-size: 1.5em;
+  }
+
+  .snippets-list {
+    padding: 20px 20px 60px;
+  }
+
+  .snippet-detail {
+    padding: 100px 20px 40px;
+  }
+
+  .experiences-hero {
+    padding: 100px 20px 40px;
+  }
+
+  .photo-credit {
+    padding: 20px 20px 40px;
+  }
+}
